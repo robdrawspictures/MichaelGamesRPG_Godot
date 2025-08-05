@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=8 format=3 uid="uid://nsl3bvqjb63d"]
+
+[ext_resource type="Script" uid="uid://cq50lstgdacgk" path="res://items/item_effects/item_effect.gd" id="1_dumep"]
+[ext_resource type="Script" uid="uid://c83b500qv42l5" path="res://items/item_effects/item_effect_heal.gd" id="2_rj1s8"]
+[ext_resource type="Script" uid="uid://ce7lf46khsqas" path="res://items/scripts/item_data.gd" id="2_xmv7l"]
+[ext_resource type="AudioStream" uid="uid://bessxiedpbxar" path="res://assets/audio/hp-up.wav" id="3_ia5ia"]
+[ext_resource type="Texture2D" uid="uid://cm4xyewla2owc" path="res://items/sprites/items.png" id="5_hbuy5"]
+
+[sub_resource type="Resource" id="Resource_qgymf"]
+script = ExtResource("2_rj1s8")
+heal_amount = 1
+sound = ExtResource("3_ia5ia")
+use_description = ""
+metadata/_custom_type_script = "uid://c83b500qv42l5"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26tcx"]
+atlas = ExtResource("5_hbuy5")
+region = Rect2(192, 0, 32, 32)
+
+[resource]
+script = ExtResource("2_xmv7l")
+name = "Apple"
+desc = "With this, Eve damned us all."
+texture = SubResource("AtlasTexture_26tcx")
+effects = Array[ExtResource("1_dumep")]([SubResource("Resource_qgymf")])
+metadata/_custom_type_script = "uid://ce7lf46khsqas"
